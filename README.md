@@ -33,7 +33,7 @@
   Check out the following videos to see the project in action:
   * [Demo Video](): This video provides an overview of the project and shows how it works.
   * [Practical Use Video 1](https://youtu.be/ulLWXXdCyck): This video shows the project being used in a real-world scenario, highlighting its practical applications.
-  * [Practical Use Video 2](https://youtu.be/WYW6d2NBO70): This video also shows the project being used in a real-world scenario, highlighting its practical applications.
+  * [Practical Use Video 2](https://youtu.be/WYW6d2NBO70): This video also shows the project being used in a real-world scenario.
 
 
 ## Contributions
