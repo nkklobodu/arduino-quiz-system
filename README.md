@@ -17,7 +17,7 @@
 ## Technical Specifications
 ### Hardware
   * Arduino UNO (1 for master and 3 for slave units)
-  * NRF24L01 transceiver modules (4 units for master and slaves)
+  * nRF24L01 transceiver modules (4 units for master and slaves)
   * LCD screens (1 units for master)
   * 2 or 3 digit seven segment display (3 units for slaves)
   * Rotary encoder (1 unit for master)
