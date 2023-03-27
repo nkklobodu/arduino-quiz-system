@@ -10,8 +10,10 @@
 
 
 # Arduino Quiz Buzzer and Score Keeping System
-  The Arduino Quiz Buzzer and Score Keeping System is a wireless buzzer system designed for quiz and trivia games. This prototype consists of one master unit and three slave units, with room for more slaves. The master unit keeps track of individual scores and allows a user to enter scores for the contestants and update the slave's scores.
-  This project is perfect for quizzes involving speed where the first contestant(s) to buzz in needs to be determined
+  <img src="images/slave.jpg" alt = "slave" width="800">
+  The Arduino Quiz Buzzer and Score Keeping System is a wireless buzzer system designed for quiz and trivia games. This prototype consists of one master unit and three slave units, with room for more slaves.
+  The master unit keeps track of individual scores and allows a user to enter scores for the contestants and update the slave's scores.
+  This project is perfect for quizzes involving speed where the first contestant(s) to buzz in needs to be determined.
 
 
 ## Technical Specifications
@@ -27,6 +29,16 @@
 
 ### Software
   * [Arduino IDE](https://www.arduino.cc/en/software)
+
+
+## Project Overview and Functionality
+  The Arduino Quiz Buzzer and Score Keeping System is a project designed to add an interactive element to any quiz or trivia event. The system is composed of a master Arduino board, which acts as the central controller, and multiple slave boards, which are connected to quiz buzzer buttons.
+
+  When a player buzzes in on their buzzer button, the corresponding slave board sends a signal to the master board, which keeps track of the order in which the players buzzed in. The master board then allows for score enntry of the player who has the current turn.
+
+  The system is very versatile and can be used for a wide range of quiz formats, from simple multiple-choice questions to more complex formats, such as those involving speed races, buzz-in answers or timed responses. The system can be expanded easily by adding more slave boards to accommodate additional players or teams.
+
+  Overall, the Arduino Quiz Buzzer and Score Keeping System is a fun and interactive way to add some excitement to any quiz or trivia event. Whether you're hosting a school competition or a family game night, this system is sure to keep players engaged and entertained.
 
 
 ## Demo and Practical Use Videos
