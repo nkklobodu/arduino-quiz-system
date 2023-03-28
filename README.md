@@ -24,7 +24,8 @@
   * 2 or 3 digit seven segment display (3 units for slaves)
   * Rotary encoder (1 unit for master)
   * Push buttons (5 units for master and slaves)
-  * Breadboards (4 units for master and slaves)
+  * Active buzzers (3 units)
+  * Breadboards
   * Jumper wires
 
 ### Software
