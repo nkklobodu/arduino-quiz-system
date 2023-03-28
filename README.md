@@ -39,7 +39,7 @@
 
   The system is very versatile and can be used for a wide range of quiz formats, from simple multiple-choice questions to more complex formats, such as those involving speed races, buzz-in answers or timed responses. The system can be expanded easily by adding more slave boards to accommodate additional players or teams.
   
-  The communication between the slave and the master is wireless, achieved using nRF24L01 transceiver modules. This module allows for reliable and efficient data transfer, making the entire system easy to set up and use. With this wireless communication.
+  The communication between the slave and the master is wireless, achieved using nRF24L01 transceiver modules. This module allows for reliable and efficient data transfer, making the entire system easy to set up and use.
   
   Using wireless communication provides several advantages over wired communication. Firstly, it eliminates the need for physical cables, reducing the cost and complexity of the system. Additionally, it allows for greater flexibility in system design, as components can be placed in any location without the constraint of cable length. Wireless communication also reduces the risk of cable damage or failure, which can be a common issue in wired systems. Overall, wireless communication with nRF24L01 modules provides a reliable, cost-effective, and flexible solution for communication between the master and slave components of the Arduino Quiz Buzzer and Score Keeping System.
 
