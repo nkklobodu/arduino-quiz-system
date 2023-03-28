@@ -10,7 +10,7 @@
 
 
 # Arduino Quiz Buzzer and Score Keeping System
-  <img src="images/slave.jpg" alt = "slave" width="800">
+  <img src="images/setup.jpg" alt = "setup" width="780">
   The Arduino Quiz Buzzer and Score Keeping System is a wireless buzzer system designed for quiz and trivia games. This prototype consists of one master unit and three slave units, with room for more slaves.
   The master unit keeps track of individual scores and allows a user to enter scores for the contestants and update the slave's scores.
   This project is perfect for quizzes involving speed where the first contestant(s) to buzz in needs to be determined.
