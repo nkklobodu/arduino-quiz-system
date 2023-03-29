@@ -1,5 +1,4 @@
 <!--
-  * add a proper demo video
   * Create links to hardware and software
   * Add about me section
 
