@@ -4,21 +4,22 @@
 #include <nRF24L01.h>
 #include <RF24.h>
 #include <LiquidCrystal_I2C.h>
-#include "slave.h" // include the "slave.h" header file
+#include "slave.h"
+#include "config.h"
 
 
 // define peripherals and create objects
-uint8_t butEnter = 4; //"Enter" button
-uint8_t butEsc = 5;   //"Escape" button
-uint8_t CLK = 2;      //rotary encoder CLK pin
-uint8_t DT = 3;       //rotary encoder DT pin
+uint8_t butEnter = BUTTON_ENTER;
+uint8_t butEsc = BUTTON_ESCAPE;
+uint8_t CLK = ROTARY_CLK;
+uint8_t DT = ROTARY_DT;
 
-LiquidCrystal_I2C lcd(0x27, 16, 2); //LCD display object (address, length, height)
-RF24 radio(9, 8); //nRF24L01 radio module object (CE, CSN)
+LiquidCrystal_I2C lcd(LCD_ADDRESS, LCD_LENGTH, LCD_HEIGHT);
+RF24 radio(CE_PIN, CSN_PIN);
 
 
 // define necessary variables
-const uint64_t pipes[4] = { //all slave addresses
+const uint64_t pipes[] = { //all slave addresses
   0,  //unused
   0xF0F0F0F0E1LL,
   0xF0F0F0F0E2LL,
@@ -55,16 +56,15 @@ bool buttonPressed(uint8_t but);  //detect push button click with debouncing
 
 
 void setup() {
-  Serial.begin(500000); //initialize serial communication at 500000 baud rate  
-  radio.begin();  //initialize NRF24L01 module
-  
-  lcd.init();       //initialize the LCD display
-  lcd.clear();      //clear LCD screen
-  lcd.backlight();  //turn on LCD backlight
+  Serial.begin(115200); 
+  radio.begin();
+  lcd.init();
+
+  lcd.clear();
+  lcd.backlight();
 
   pinMode(butEnter,INPUT_PULLUP); //configure "Enter" button pin as input with pull-up resistor
   pinMode(butEsc,INPUT_PULLUP);   //configure "Escape" button pin as input with pull-up resistor
-  
   pinMode(CLK,INPUT); //configure CLK pin as input
   pinMode(DT,INPUT);  //configure DT pin as input
 
@@ -86,8 +86,8 @@ void setup() {
 
 void loop() {
   // debugging
-  static unsigned long lastTime = 0;
-  if (millis() - lastTime >= 10UL) {
+  static unsigned long lastDebugTime = 0;
+  if (millis() - lastDebugTime >= 10UL) {
     Serial.print("mode: ");
     Serial.print(mode);
     Serial.print("    ");
@@ -116,12 +116,13 @@ void loop() {
     Serial.print("lcdPrintOnce: ");
     Serial.println(lcdPrintOnce);
 
-    lastTime = millis();
+    lastDebugTime = millis();
   }
 
 
 
-  // if queue is empty, set mode to 0 (idle), otherwise set mode to 1 (handle queued slaves)
+  // if queue is empty, set mode to 0 (idle)
+  // otherwise set mode to 1 (handle queued slaves)
   queue[0]==0 ? mode=0 : mode=1;
 
   // mode 0: idle

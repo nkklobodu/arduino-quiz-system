@@ -1,6 +1,6 @@
 // send score to each slave
 void sendAllScores() {
-  for (int i = 1; i < 4; i++) { //loop through all three slaves
+  for (int i = 1; i < NUMBER_OF_SLAVES + 1; i++) { //loop through all slaves addresses
     radio.openWritingPipe(pipes[i]); //set radio to writing mode for current slave's address
     radio.stopListening(); //set module as transmitter
     int scorePayload = slaveObjects[i].score; //retrieve current slave's score
